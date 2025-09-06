@@ -1,3 +1,5 @@
+package lambda_default_static;
+
 public class InterfaceImplDemo implements DefaultInterfaceDemoA, DefaultInterfaceDemoB, StaticInterfaceDemo {
     public static void main(String[] args) {
         // Create the object of class that implements the interfaces

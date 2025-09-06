@@ -1,3 +1,5 @@
+package lambda_default_static;
+
 public class LambdaExpressionDemo {
     public static void main(String[] args) {
         // This is wihout lambda expression
