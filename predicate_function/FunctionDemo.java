@@ -1,5 +1,6 @@
 package predicate_function;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class FunctionDemo {
@@ -19,5 +20,10 @@ public class FunctionDemo {
         Function<String, Integer> square = x -> x.length() * x.length();
         Function<Integer, Integer> doubleIt = x -> x * 2;
         System.out.println("The length of the string squared and doubled is : " + square.andThen(doubleIt).apply(name));
+
+        // We have the BiFunction also which takes two arguments and return a value
+        BiFunction<String, Integer, Integer> multiWordLetters = (str, num) -> str.length() * num;
+        System.out.println("The length of the string multiplied by " + 5 + " is : "
+                + multiWordLetters.apply(name, 4));
     }
 }

@@ -1,5 +1,6 @@
 package predicate_function;
 
+import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 public class PredicateDemo {
@@ -19,5 +20,9 @@ public class PredicateDemo {
         System.out.println("Is " + y + " Even Number : " + isEven.test(y));
         System.out.println(
                 "Is " + y + " Greater Than or Equal to 100 and Even Number: " + isEven.and(isGreaterThan).test(y));
+
+        // We have the BiPredicate functional interface also which takes two arguments
+        BiPredicate<String, Integer> checkLength = ((str, num) -> str.length() == num);
+        System.out.println(checkLength.test("Hello, World", 12));
     }
 }
