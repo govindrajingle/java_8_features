@@ -23,6 +23,9 @@ public class StreamDemo {
         // Processing of stream using forEach (terminal operation)
         names.stream().filter(x -> x.startsWith("J") && x.length() < 19).forEach(System.out::println);
 
+        // Map Example
+        names.stream().map(x -> x.toUpperCase()).forEach(System.out::println);
+
     }
 
     // Traditional Way
